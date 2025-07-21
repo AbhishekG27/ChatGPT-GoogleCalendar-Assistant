@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # Initialize Firebase App
 if not firebase_admin._apps:
     try:
-        cred = credentials.Certificate("fir-be1cb-firebase-adminsdk-75vci-0264b19c00.json")
+        cred = credentials.Certificate("firebase.json")
         firebase_admin.initialize_app(cred)
     except Exception as e:
         st.error(f"Failed to initialize Firebase: {e}")
